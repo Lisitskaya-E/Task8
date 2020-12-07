@@ -16,8 +16,14 @@ void qs(int* a, int l, int r)
 
     do
     {
-        while (a[i] < x) i++;
-        while (a[j] > x) j--;
+        while (a[i] < x) {
+                i++;
+                s1+=1;
+        }s1+=1;
+        while (a[j] > x) {
+                j--;
+                s1+=1;
+        }s1+=1;
 
         if(i <= j)
         {
@@ -25,6 +31,7 @@ void qs(int* a, int l, int r)
             if (a[i] > a[j])
             {
                 p1=p1+1;
+
 
                 swap(&a[i], &a[j]);
             }
